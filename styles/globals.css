@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  body {
+    @apply font-sans text-gray-900 bg-white leading-relaxed overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold leading-tight;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block px-10 py-4 rounded-full font-semibold cursor-pointer transition-all duration-300 border-none text-base;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-light hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(99,71,154,0.3)];
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-hover hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(140,198,63,0.3)];
+  }
+
+  .section {
+    @apply py-24 md:py-32;
+  }
+
+  .container {
+    @apply max-w-[1200px] mx-auto px-6 md:px-8;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #63479a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7a5eb4;
+}
